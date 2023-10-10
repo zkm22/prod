@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
+    "skipLibCheck": true,
     "paths": {
       "database": ["./src/index"]
     }
