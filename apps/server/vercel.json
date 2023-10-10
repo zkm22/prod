@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "cd ../.. && turbo run build --filter={/apps/server}",
   "builds": [
     {
       "src": "src/main.ts",
