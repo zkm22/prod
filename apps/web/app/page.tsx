@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card } from "ui";
 import styles from "./page.module.css";
+import { PrismaClient } from 'database'
 
 function Gradient({
   conic,
@@ -11,6 +12,7 @@ function Gradient({
   conic?: boolean;
   className?: string;
 }): JSX.Element {
+  const client = new PrismaClient();
   return (
     <span
       className={[
