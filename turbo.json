@@ -9,7 +9,7 @@
       "cache": false
     },
     "build": {
-      "dependsOn": ["^build", "^db:generate", "^db:push"],
+      "dependsOn": ["^db:generate", "^db:push", "^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
