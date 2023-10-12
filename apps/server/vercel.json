@@ -1,9 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd ../.. && turbo run build --filter={./apps/server}",
-  "env": {
-    "ENABLE_VC_BUILD": "1"
-  },
+  "buildCommand": "cd ../.. && turbo run build --filter={apps/server}",
   "builds": [
     {
       "src": "src/main.ts",
