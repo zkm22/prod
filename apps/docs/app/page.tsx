@@ -1,8 +1,5 @@
-import Image from "next/image";
-import { Card } from "ui";
 import styles from "./page.module.css";
 import { PrismaClient } from "database";
-import { useEffect } from "react";
 
 function Gradient({
   conic,
@@ -51,19 +48,20 @@ const LINKS = [
   },
 ];
 
-export default function Page(): JSX.Element {
+export default async function Page() {
   const client = new PrismaClient();
 
   async function test() {
     const a = await client.user.findMany();
     console.log(a);
+    return a;
   }
 
-  test();
+  const b = await test();
 
   return (
     <main className={styles.main}>
-      {}
+      {JSON.stringify(b)}
     </main>
   );
 }
