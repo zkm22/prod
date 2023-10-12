@@ -54,14 +54,12 @@ const LINKS = [
 export default function Page(): JSX.Element {
   const client = new PrismaClient();
 
-  useEffect(() => {
-    test();
-  });
-
   async function test() {
     const a = await client.user.findMany();
     console.log(a);
   }
+
+  test();
 
   return (
     <main className={styles.main}>
