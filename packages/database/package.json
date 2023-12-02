@@ -6,18 +6,21 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch",
+    "dev": "prisma studio & tsc --watch",
     "postinstall": "tsc",
     "db:generate": "prisma generate",
-    "db:push": "prisma db push --skip-generate"
+    "db:push": "prisma db push --skip-generate",
+    "db:studio": "prisma studio"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.1.3",
     "prisma": "^5.4.2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^5.4.2"
+    "@prisma/client": "^5.4.2",
+    "crypto-js": "^4.2.0"
   }
 }
